@@ -8,4 +8,4 @@ wheels/
 
 # Virtual environments
 .venv
-/server/.env
+server/.env

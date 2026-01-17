@@ -1,0 +1,3 @@
+RAG based Medical Assistant application using Groq,Gemini Embedding,FastAPI,Pinecone,Streamlit....
+
+uv for project management
