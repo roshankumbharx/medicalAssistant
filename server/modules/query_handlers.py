@@ -4,14 +4,14 @@ from logger import logger
 def query_chain(chain,user_input:str):
     try:
         logger.debug(f"Running chain for input:{user_input}")
-        result = chain({'query':user_input})
+        result = chain.invoke({"question":user_input})
         response = {
-            "response":result['result'],
-            "sources":[doc.metadata.get("sources","") for doc in result['source_documents']]
+            "response":result,
+            "sources":[]
         }
         logger.debug(f"chain response:{response}")
         return response
     except Exception as e:
-        logger.exception("Error on query chain")
+        logger.exception("Error on question chain")
         raise 
         
