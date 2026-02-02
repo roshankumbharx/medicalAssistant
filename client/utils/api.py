@@ -7,4 +7,4 @@ def upload_pdfs_api(files):
     return requests.post(f"{API_URL}/upload_pdfs/",files=files_payload)
 
 def ask_question(question):
-    return requests.post(f"{API_URL}/ask/",data={"question":question})
+    return requests.post(f"{API_URL}/ask_question/",data={"question":question})

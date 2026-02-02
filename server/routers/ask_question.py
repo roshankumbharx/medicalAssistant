@@ -19,7 +19,6 @@ async def ask_question(question:str=Form(...)):
     try:
         logger.info(f"User query:{question}")
         
-        # embed query and retrieve top k results
         pc=Pinecone(api_key=os.environ["PINECONE_API_KEY"])
         index=pc.Index(os.environ["PINECONE_INDEX_NAME"])
         embed_model = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001",output_dimensionality=1024)

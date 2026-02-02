@@ -16,15 +16,10 @@ app.add_middleware(
     
 )
 
-# middleware exception handlers
 app.middleware("http")(catch_exception_middleware)
 
-# routers
-
-# 1. upload a pdf
 app.include_router(upload_router)
 
-# 2. asking query
 app.include_router(ask_router)
 
 
