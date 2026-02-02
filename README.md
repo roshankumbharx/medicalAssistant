@@ -49,38 +49,43 @@ Retrieves context and generates an answer for a medical query.
 ---
 
 ## Folder Structure
-└── 📁assets
-    ├── DIABETES.pdf
-└── 📁client
-    └── 📁components
-        ├── chatUI.py
-        ├── history_download.py
-        ├── upload.py
-    └── 📁utils
-        ├── api.py
-    ├── app.py
-    ├── config.py
-    └── requirements.txt
-└── 📁server
-    └── 📁middlewares
-        ├── exception_handlers.py
-    └── 📁modules
-        ├── llm.py
-        ├── load_vectorstore.py
-        ├── pdf_handlers.py
-        ├── query_handlers.py
-    └── 📁routes
-        ├── ask_question.py
-        ├── upload_pdfs.py
-    └── 📁uploaded_docs
-        ├── DIABETES.pdf
-        ├── Supratim Nag - LOR.pdf
-    ├── .env
-    ├── logger.py
-    ├── main.py
-    ├── requirements.txt
-    └── test.py
+```
+├── assets
+│   └── DIABETES.pdf
+├── client
+│   ├── components
+│   │   ├── chatUI.py
+│   │   ├── history_download.py
+│   │   └── upload.py
+│   ├── utils
+│   │   └── api.py
+│   ├── app.py
+│   ├── config.py
+│   └── requirements.txt
+└── server
+|    ├── middlewares
+|    │   └── exception_handlers.py
+|    ├── modules
+|    │   ├── llm.py
+|    │   ├── load_vectorstore.py
+|    │   ├── pdf_handlers.py
+|    │   └── query_handlers.py
+|    ├── routes
+|    │   ├── ask_question.py
+|    │   └── upload_pdfs.py
+|    ├── .env
+|    ├── logger.py
+|    ├── main.py
+|    ├── requirements.txt
+|    └── test.py
+└── .gitignore
+└── .python-version
+└── main.py
+└── pyproject.toml
+└── README.md
 
+
+```
 ---
 
 ## Quick Setup
@@ -125,4 +130,5 @@ $ streamlit run app.py
 ## Deployment
 
 Backend Hosted on Render
+
 Frontend Hosted on Streamlit Cloud
